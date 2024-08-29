@@ -1,0 +1,74 @@
+{
+    "typeMatches": [
+        {
+            "matchType": "League",
+            "seriesMatches": [
+                {
+                    "seriesAdWrapper": {
+                        "seriesId": 8652,
+                        "seriesName": "Maharaja Trophy KSCA T20 2024",
+                        "matches": [
+                            {
+                                "matchInfo": {
+                                    "matchId": 103800,
+                                    "seriesId": 8652,
+                                    "seriesName": "Maharaja Trophy KSCA T20 2024",
+                                    "matchDesc": "29th Match",
+                                    "matchFormat": "T20",
+                                    "startDate": "1724923800000",
+                                    "endDate": "1724936400000",
+                                    "state": "Toss",
+                                    "status": "Mangalore Dragons opt to bowl",
+                                    "team1": {
+                                        "teamId": 423,
+                                        "teamName": "Bengaluru Blasters",
+                                        "teamSName": "BLB",
+                                        "imageId": 172473
+                                    },
+                                    "team2": {
+                                        "teamId": 122,
+                                        "teamName": "Mangalore Dragons",
+                                        "teamSName": "MD",
+                                        "imageId": 338073
+                                    },
+                                    "venueInfo": {
+                                        "id": 27,
+                                        "ground": "M.Chinnaswamy Stadium",
+                                        "city": "Bengaluru",
+                                        "timezone": "+05:30",
+                                        "latitude": "12.978853",
+                                        "longitude": "77.599533"
+                                    },
+                                    "seriesStartDt": "1723680000000",
+                                    "seriesEndDt": "1725321600000",
+                                    "isTimeAnnounced": true,
+                                    "stateTitle": "Toss"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "adDetail": {
+                        "name": "native_matches",
+                        "layout": "native_large",
+                        "position": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "filters": {
+        "matchType": [
+            "International",
+            "League",
+            "Domestic",
+            "Women"
+        ]
+    },
+    "appIndex": {
+        "seoTitle": "Live Cricket Score - Scorecard and Match Results",
+        "webURL": "www.cricbuzz.com/live-cricket-scores/"
+    },
+    "responseLastUpdated": "1724922480"
+}
