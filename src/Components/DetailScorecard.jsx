@@ -5,19 +5,19 @@ import { getMatchScorecard } from "../api/util";
 function Scorecard() {
   const { id } = useParams();
   const [scorecard, setScorecard] = useState(null);
-  const [result, setresult] = useState(null);
-  const [playermatch, setplayermatch] = useState(null);
-  const [playerseries, setplayerseries] = useState(null);
+  const [result, setResult] = useState(null);
+  const [playerMatch, setPlayerMatch] = useState(null);
+  const [playerSeries, setPlayerSeries] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getMatchScorecard(id)
       .then((data) => {
         console.log(data);
-        setresult(data);
+        setResult(data);
         setScorecard(data.scoreCard);
-        setplayermatch(data.matchHeader.playersOfTheMatch);
-        setplayerseries(data.matchHeader.playersOfTheSeries);
+        setPlayerMatch(data.matchHeader.playersOfTheMatch);
+        setPlayerSeries(data.matchHeader.playersOfTheSeries);
         setLoading(false);
       })
       .catch((error) => {
@@ -36,25 +36,27 @@ function Scorecard() {
 
   return (
     <div className="scorecard-container mx-8 my-12">
-      <h2 className="text-center mb-6 font-bold text-2xl ">
+      <h2 className="text-center mb-6 font-bold text-2xl">
         {result.status}
       </h2>
-      {playermatch.map((player) => (
-        <h2 className="text-center mb-6 font-bold text-2xl">
+      {playerMatch.map((player) => (
+        <h2 className="text-center mb-6 font-bold text-2xl" key={player.fullName}>
           Player Of The Match: {player.fullName}
         </h2>
       ))}
-      {playerseries.length === 0
+      {playerSeries.length === 0
         ? null
-        : playerseries.map((player, index) => <h2 className="text-center mb-12 font-bold text-2xl" key={index}>Player Of The Series : {player.fullName}</h2>
-      )}
-     
-     
+        : playerSeries.map((player, index) => (
+            <h2 className="text-center mb-12 font-bold text-2xl" key={index}>
+              Player Of The Series: {player.fullName}
+            </h2>
+          ))}
+
       {scorecard.map((inning, index) => (
         <div key={index} className="inning-section mb-8">
           <h2 className="text-2xl font-bold mb-4">
-            {index % 2 === 0 ? "1st Inning" : "2nd Inning"} -{" "}
-            {inning.batTeamDetails.batTeamName} Batting  Score: {inning.scoreDetails.runs}/{inning.scoreDetails.wickets} ({inning.scoreDetails.overs})
+            {`${index + 1}${index === 0 ? "st" : index === 1 ? "nd" : index === 2 ? "rd" : "th"} Inning`} -{" "}
+            {inning.batTeamDetails.batTeamName} Batting Score: {inning.scoreDetails.runs}/{inning.scoreDetails.wickets} ({inning.scoreDetails.overs})
           </h2>
 
           <table className="table-auto w-full bg-gray-100 shadow-lg rounded-lg mb-8">
@@ -87,7 +89,7 @@ function Scorecard() {
           </table>
 
           <h2 className="text-2xl font-bold mb-4">
-            {index % 2 === 0 ? "1st Inning" : "2nd Inning"} -{" "}
+            {`${index + 1}${index === 0 ? "st" : index === 1 ? "nd" : index === 2 ? "rd" : "th"} Inning`} -{" "}
             {inning.bowlTeamDetails.bowlTeamName} Bowling
           </h2>
           <table className="table-auto w-full bg-gray-100 shadow-lg rounded-lg">

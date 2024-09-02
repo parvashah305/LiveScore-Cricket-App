@@ -4,7 +4,7 @@ export function getMatchdata() {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': '2a45c9ab98mshf2ccd7d6eb0f0b7p1da9ffjsnf2b9200e4cc3',
+      'x-rapidapi-key': import.meta.env.VITE_API_KEY,
       'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
     }
   };
@@ -25,7 +25,7 @@ export function getMatchinfo(id) {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': '2a45c9ab98mshf2ccd7d6eb0f0b7p1da9ffjsnf2b9200e4cc3',
+      'x-rapidapi-key': import.meta.env.VITE_API_KEY,
       'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
     }
   };
@@ -46,7 +46,7 @@ export function getMatchScorecard(id) {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': '2a45c9ab98mshf2ccd7d6eb0f0b7p1da9ffjsnf2b9200e4cc3',
+      'x-rapidapi-key': import.meta.env.VITE_API_KEY,
       'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
     }
   };
@@ -67,7 +67,7 @@ export function getUpcomingMatchdata() {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': '2a45c9ab98mshf2ccd7d6eb0f0b7p1da9ffjsnf2b9200e4cc3',
+      'x-rapidapi-key': import.meta.env.VITE_API_KEY,
       'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
     }
   };
@@ -86,7 +86,7 @@ export function getLiveMatchdata() {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': '2a45c9ab98mshf2ccd7d6eb0f0b7p1da9ffjsnf2b9200e4cc3',
+      'x-rapidapi-key': import.meta.env.VITE_API_KEY,
       'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
     }
   };
