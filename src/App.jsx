@@ -7,9 +7,13 @@ import Home from "./Home";
 import { Route,Routes } from "react-router-dom";
 import DetailScorecard from "./Components/DetailScorecard";
 
+
+
 import Live from "../Live";
 import Recent from "../Recent";
 import Upcoming from "../Upcoming";
+
+import './App.css'
 
 
 function App() {

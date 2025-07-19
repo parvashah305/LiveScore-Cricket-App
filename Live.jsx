@@ -48,6 +48,7 @@ function Live() {
         <Navbar/>
         {livematch.map((match) => (
         <Card
+          key={match.id}
           id={match.id}
           startdate={match.startdate}
           team1={match.team1}
